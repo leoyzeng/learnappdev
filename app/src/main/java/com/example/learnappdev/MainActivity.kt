@@ -9,12 +9,18 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import com.example.learnappdev.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var textChange: TextView;
+    private lateinit var editTextChange: EditText;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +38,17 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+    }
+
+    public fun changeText(view: View){
+
+        editTextChange = findViewById(R.id.editTextChange);
+        textChange = findViewById(R.id.textChange);
+        textChange.setText(editTextChange.getText().toString() + " is a goober");
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
