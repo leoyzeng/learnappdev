@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
         textChange = findViewById(R.id.textChange);
         textChange.setText(editTextChange.getText().toString() + " is a goober");
 
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
