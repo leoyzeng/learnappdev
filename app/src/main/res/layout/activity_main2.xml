@@ -54,7 +54,21 @@
             android:layout_marginTop="93dp"
             android:layout_marginBottom="155dp"
             android:text="Button" />
+
+
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="166dp"
+        android:layout_height="260dp">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -65,6 +79,7 @@
         android:layout_marginTop="91dp"
         android:layout_marginEnd="51dp"
         app:srcCompat="@drawable/ic_launcher_background" />
+
 
 
 </RelativeLayout>

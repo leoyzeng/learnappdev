@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
     fun nextActivity(view: View){
         val myIntent = Intent(this, MainActivity2::class.java)
         this.startActivity(myIntent)
