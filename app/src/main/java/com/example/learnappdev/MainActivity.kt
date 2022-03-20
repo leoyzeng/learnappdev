@@ -1,18 +1,20 @@
 package com.example.learnappdev
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.learnappdev.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +41,11 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
+    }
+
+    fun nextActivity(view: View){
+        val myIntent = Intent(this, MainActivity2::class.java)
+        this.startActivity(myIntent)
     }
 
     public fun changeText(view: View){
